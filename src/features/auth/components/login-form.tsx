@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "sonner";
+import Image from "next/image";
 
 
 const loginSchema = z.object({
@@ -65,9 +66,11 @@ export function LoginForm() {
                         <div className="grid gap-6">
                             <div className="flex flex-col gap-6">
                                 <Button variant="outline" type="button" disabled={isPending}>
+                                    <Image alt="Github" src="/logos/github.svg" width={20} height={20} />
                                     Continue With Github
                                 </Button>
                                 <Button variant="outline" type="button" disabled={isPending}>
+                                    <Image alt="Google" src="/logos/google.svg" width={20} height={20} />
                                     Continue With Google
                                 </Button>
                             </div>
